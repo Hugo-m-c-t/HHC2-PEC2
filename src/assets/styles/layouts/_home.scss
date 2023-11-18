@@ -1,0 +1,175 @@
+// Encabezado
+.encabezado {
+  margin-bottom: 2rem;
+}
+
+.encabezado__logo {
+  max-width: 30dvw;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .encabezado__logo {
+    max-width: 20dvw;
+    margin-left: 5rem;
+  }
+
+  .encabezado__nav{
+    margin-right: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .encabezado__logo {
+    max-width: 10dvw;
+  }
+}
+
+// Footer
+.pie {
+  margin-top: 2rem;
+}
+
+.pie__logo {
+  max-width: 20dvw;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .pie__logo {
+    max-width: 10dvw;
+    margin-left: 5rem;
+  }
+  .pie__nav{
+    margin-right: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pie__logo {
+    max-width: 5dvw;
+  }
+
+  :is(.encabezado__nav, .pie__nav) li {
+  border-right: 1px solid $info;
+}
+
+:is(.encabezado__nav, .pie__nav) li:last-of-type {
+  border-right: none;
+  }
+}
+
+// Iconos del Footer
+
+.icono {
+  padding: 0.2rem;
+}
+
+// Color de fondo
+
+:is(.encabezado, .pie) {
+  background: lab(97.964%, -8.581%, 12.143%);
+}
+
+.encabezado--index {
+  background: none;
+}
+
+// Vínculos
+
+.vinculo {
+  color: $info;
+}
+.vinculo--crecer {
+  transition: all .2s ease-in-out;
+}
+
+.vinculo--crecer:hover {
+  transform: scale(1.05);
+  color: rgba($info, 0.8); 
+}
+
+
+// Portada con Grid y alternativa
+
+.cuerpo {
+  background-image: url("../images/fondo.png");
+}
+
+.portada {
+  background-color: rgba($white, 0.6);
+  border-radius: 25px;
+  display: flex;
+  max-width: 90%;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  justify-content: center;
+  font-family: $font-family-pixel, sans-serif;
+  box-shadow: 9px 10px 5px -7px rgba(0,0,0,0.25);
+}
+
+.portada__titulo {
+  font-size: 5rem;
+  color: $primary;
+  text-align: center;
+}
+
+.portada__subtitulo {
+  font-size: 3rem;
+  color: $primary;
+  text-decoration: underline overline;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.portada__bloque-texto {
+  line-height: 2rem;
+  font-size: 2rem;
+  color: $info;
+}
+
+.portada__img {
+
+}
+
+.portada__boton {
+  color: white;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.portada__boton:hover {
+  color: white;
+  background-color: $info;
+  border: none;
+}
+
+.portada__premio {
+  text-align: center;
+  color: $primary;
+}
+
+@media (min-width: 768px){
+  .portada {
+    max-width: 60%;
+  }
+
+  :is(.portada__bloque-texto, .portada__premio){
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+}
+
+@media (min-width: 1200px){
+  .portada {
+    max-width: 50%;
+  }
+}
+
+
+@supports (display: grid) {
+
+}
