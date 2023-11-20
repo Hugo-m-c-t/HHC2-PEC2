@@ -1,11 +1,3 @@
-@layer css-reset, other;
-
-@layer css-reset{
-
-}
-
-@layer other{
-
 
 // Encabezado
 .encabezado {
@@ -32,6 +24,12 @@
 @container encabezado (min-width: 1200px) {
   .encabezado__logo {
     max-width: 10dvw;
+  }
+}
+
+@container encabezado (min-width: 2200px) {
+  .nav-link {
+    font-size: 3em;
   }
 }
 
@@ -67,6 +65,12 @@
 
 :is(.encabezado__nav, .pie__nav) li:last-of-type {
   border-right: none;
+  }
+}
+
+@container pie (min-width: 2200px) {
+  .nav-link {
+    font-size: 3em;
   }
 }
 
@@ -108,6 +112,7 @@
 }
 
 .portada {
+  container: portada / inline-size;
   background-color: rgba($white, 0.6);
   border-radius: 25px;
   display: flex;
@@ -125,6 +130,7 @@
   font-size: 5rem;
   color: $primary;
   text-align: center;
+  text-shadow: 0px 4px 0 rgba($orange, 0.5);
 }
 
 .portada__subtitulo {
@@ -133,16 +139,18 @@
   text-decoration: underline overline;
   text-align: center;
   margin-bottom: 1rem;
+  text-shadow: 0px 3px 0 rgba($orange, 0.5);
 }
 
 .portada__bloque-texto {
   line-height: 2rem;
   font-size: 2rem;
   color: $info;
+  padding-top: 1rem;
 }
 
-.portada__img {
-
+.portada__img-2 {
+  display: none;
 }
 
 .portada__boton {
@@ -158,11 +166,16 @@
 }
 
 .portada__premio {
+  background-color: $info;
+  border-radius: 5px;
+  padding: 1rem;
+  color: $white;
+  font-size: 1.5rem;
   text-align: center;
-  color: $primary;
+  text-shadow: 0px 2px 0 rgba($black, 0.5);
 }
 
-@media (min-width: 768px){
+@container portada (min-width: 768px){
   .portada {
     max-width: 60%;
   }
@@ -174,7 +187,7 @@
 
 }
 
-@media (min-width: 1200px){
+@container portada (min-width: 1200px){
   .portada {
     max-width: 50%;
   }
@@ -183,6 +196,235 @@
 
 @supports (display: grid) {
 
+  .cuerpo {
+    background-image: none;
+  }
+
+  .portada {
+    display: grid;
+    width: 90%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+    background: none;
+    box-shadow: none;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-rows: auto;
+    }
+
+
+  .portada__premio {
+    grid-area: 7 / 1 / 7 / 6;
+    background-color: $info;
+    height: fit-content;
+    font-size: 1.5rem;
+  }
+  .portada__img-2 { 
+    display: block;
+    border: 10px solid $info;
+    grid-area: 6 / 1 / 6 / 6;
+    z-index: -1;
+    margin-bottom: 2rem;
+  }
+  .portada__titulo { 
+    grid-area: 1 / 1 / 1 / 6;
+    font-size: 4rem; 
+    height: fit-content;
+    align-self: center;
+  }
+  .portada__img { 
+    grid-area: 3 / 1 / 4 / 6;
+    border: 10px solid $primary;
+    z-index: -2;
+  }
+  .portada__bloque-texto { 
+    grid-area: 5 / 1 / 5 / 6; 
+    height: fit-content;
+  }
+  .portada__subtitulo { 
+    grid-area: 2 / 1 / 2 / 6; 
+    height: fit-content;
+    text-decoration: none;
+    background-color: $white;
+    border: 10px solid $info;
+    border-right: none;
+    border-left: none;
+  }
+  .portada__boton {
+    grid-area: 8 / 1 / 8 / 6;
+    height: fit-content;
+  }
+
+  @container portada (min-width: 768px){
+    .portada {
+      max-width: 90%;
+    }
+
+    .portada__img {
+      grid-area: 1 / 1 / 3 / 5;
+    }
+
+    .portada__img-2 {
+      grid-area: 2 / 3 / 3 / 6;
+    }
+
+    .portada__titulo {
+      grid-area: 1 / 5 / 1 / 6;
+      font-size: 5rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+
+    .portada__subtitulo {
+      grid-area: 3 / 1 / 2 / 3;
+      margin: 60% 0 auto 10px;
+      border-left: 10px solid $info;
+    }
+
+    .portada__premio {
+      grid-area: 2 / 3 / 2 / 5;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+
+    .portada__bloque-texto {
+      grid-area: 3 / 1 / 4 / 5;
+      margin-top: 4rem;
+    }
+
+    .portada__boton {
+      grid-area: 3 / 5 / 3 / 5;
+      margin-top: 5rem;
+    }
+
+  }
+
+  @container portada (min-width: 1050px){
+    .portada {
+      max-width: 80%;
+    }
+
+    .portada__titulo {
+      grid-area: 1 / 1 / 1 / 5;
+      color: $white;
+      font-size: 7rem;
+      margin-top: 1rem;
+    }
+
+    .portada__subtitulo {
+      grid-area: 3 / 1 / 2 / 3;
+      margin: 0;
+      border-left: 10px solid $info;
+    }
+
+    .portada__img-2 {
+      box-shadow: -6px -6px 5px 1px rgba(0,0,0,0.25);
+    }
+
+    .portada__premio {
+      grid-area: 2 / 4 / 2 / 6;
+      margin-top: 60%;
+    }
+
+    .portada__bloque-texto {
+      grid-area: 5 / 1 / 5 / 6;
+      padding: 1rem;
+      margin-top: 0;
+    }
+
+    .portada__boton {
+      grid-area: 3 / 1 / 3 / 3;
+      margin: 4rem;
+      align-self: center;
+    }
+  }
+
+  @container portada (min-width: 1300px){
+    .portada__img {
+      grid-area: 1 / 1 / 4 / 4;
+    }
+
+    .portada__img-2 {
+      grid-area: 4 / 1 / 6 / 5;
+      margin-top: -5rem;
+      object-fit: cover;
+      width: 75%;
+    }
+
+    .portada__titulo {
+      grid-area: 1 / 1 / 1 / 4;
+      color: $primary;
+      background-color: $white;
+      font-size: 5rem;
+      border-top: 10px solid $primary;
+      border-bottom: 10px solid $primary;
+      margin: 3rem 0 0 0;
+    }
+
+    .portada__subtitulo {
+      grid-area: 4 / 1 / 4 / 4;
+      border-top: 10px solid $info;
+      border-bottom: 10px solid $info;
+    }
+
+    .portada__premio {
+      grid-area: 1 / 4 / 1 / 6;
+      margin-top: 0;
+    }
+
+    .portada__bloque-texto {
+      grid-area: 2 / 4 / 5 / 6;
+    }
+
+    .portada__boton {
+      grid-area: 4 / 4 / 4 / 6;
+      margin-top: 7rem;
+    }
+  }
+
+  @container portada (min-width: 1550px){
+    .portada__premio {
+      font-size: 3rem;
+    }
+
+    .portada__bloque-texto {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+
+    .portada__img-2 {
+      margin-top: -15rem;
+    }
+
+    .portada__boton {
+      grid-area: 5 / 4 / 5 / 6;
+      font-size: 4rem;
+      margin-top: 0;
+    }
+  }
+
+  @container portada (min-width: 2300px){
+
+    .portada__bloque-texto {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+
+    .portada__boton {
+      align-self: start;
+    }
+
+    .portada__titulo {
+      font-size: 8rem;
+    }
+
+    .portada__subtitulo {
+      font-size: 6rem;
+    }
+  }
 }
 
-}
