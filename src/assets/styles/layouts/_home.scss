@@ -1,4 +1,6 @@
+@layer common, other;
 
+@layer common {
 // Encabezado
 .encabezado {
   margin-bottom: 2rem;
@@ -29,7 +31,7 @@
 
 @container encabezado (min-width: 2200px) {
   .nav-link {
-    font-size: 3em;
+    font-size: 3rem !important;
   }
 }
 
@@ -70,7 +72,7 @@
 
 @container pie (min-width: 2200px) {
   .nav-link {
-    font-size: 3em;
+    font-size: 3rem !important;
   }
 }
 
@@ -104,6 +106,9 @@
   color: rgba($info, 0.8); 
 }
 
+}
+
+@layer other {
 
 // Portada con Grid y alternativa
 
@@ -138,7 +143,7 @@
   color: $primary;
   text-decoration: underline overline;
   text-align: center;
-  margin-bottom: 1rem;
+  margin: 1rem;
   text-shadow: 0px 3px 0 rgba($orange, 0.5);
 }
 
@@ -155,7 +160,7 @@
 
 .portada__boton {
   color: white;
-  font-size: 2rem;
+  font-size: 2rem !important;
   margin-top: 2rem;
 }
 
@@ -203,11 +208,11 @@
   .portada {
     display: grid;
     width: 90%;
-    padding: 0;
+    padding: 3rem;
     margin-left: auto;
     margin-right: auto;
     height: fit-content;
-    background: none;
+    background-color: $secondary;
     box-shadow: none;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(6, 1fr);
@@ -219,7 +224,6 @@
 
   .portada__premio {
     grid-area: 7 / 1 / 7 / 6;
-    background-color: $info;
     height: fit-content;
     font-size: 1.5rem;
   }
@@ -260,9 +264,6 @@
   }
 
   @container portada (min-width: 768px){
-    .portada {
-      max-width: 90%;
-    }
 
     .portada__img {
       grid-area: 1 / 1 / 3 / 5;
@@ -304,9 +305,6 @@
   }
 
   @container portada (min-width: 1050px){
-    .portada {
-      max-width: 80%;
-    }
 
     .portada__titulo {
       grid-area: 1 / 1 / 1 / 5;
@@ -317,7 +315,7 @@
 
     .portada__subtitulo {
       grid-area: 3 / 1 / 2 / 3;
-      margin: 0;
+      align-self: center;
       border-left: 10px solid $info;
     }
 
@@ -337,7 +335,7 @@
     }
 
     .portada__boton {
-      grid-area: 3 / 1 / 3 / 3;
+      grid-area: 3 / 2 / 3 / 5;
       margin: 4rem;
       align-self: center;
     }
@@ -382,11 +380,15 @@
 
     .portada__boton {
       grid-area: 4 / 4 / 4 / 6;
-      margin-top: 7rem;
+      margin-top: 9rem !important;
+      font-size: 4rem !important;
+      width: fit-content;
+      justify-self: center;
     }
   }
 
   @container portada (min-width: 1550px){
+    
     .portada__premio {
       font-size: 3rem;
     }
@@ -403,7 +405,7 @@
     .portada__boton {
       grid-area: 5 / 4 / 5 / 6;
       font-size: 4rem;
-      margin-top: 0;
+      margin-top: 0 !important;
     }
   }
 
@@ -425,6 +427,63 @@
     .portada__subtitulo {
       font-size: 6rem;
     }
+
+    .portada__premio {
+      font-size: 6rem !important;
+    }
   }
 }
 
+// Flex de miembros de la liga
+
+.titulo-miembros {
+  font-size: 3rem;
+}
+
+.conjunto-miembros {
+  container: conjunto-miembros / inline-size;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.miembro {
+  background-color: rgba($secondary, 0.6);
+  border-radius: 10px;
+  box-shadow: 9px 10px 5px -7px rgba(0,0,0,0.25);
+  width: 300px;
+  padding: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 3rem 1rem 3rem 1rem;
+  color: $info;
+}
+
+.miembro__img {
+  border-radius: 10px;
+}
+
+.miembro__nombre {
+  margin-top: 2rem !important;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.miembro__desc {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+@container conjunto-miembros (min-width: 1650px) {
+  .miembro {
+    width: 400px;
+  }
+
+  .miembro__nombre {
+    font-size: 2rem;
+  }
+  
+  .miembro__desc {
+    font-size: 1.5rem;
+  }
+}
+}

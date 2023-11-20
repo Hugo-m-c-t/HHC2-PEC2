@@ -11,7 +11,7 @@
     <div class="encabezado container-fluid bg-secondary">
       <header class="d-flex flex-column flex-md-row align-items-center justify-content-md-between  py-3">
           <div class="encabezado__logo">
-             <a href="./index.html"><img src="./assets/images/tenisLogo.png" class="img-fluid"></a>
+             <a href="./index.html"><img src="./assets/images/tenisLogo.png" alt="Logo de una pelota de tenis en un escudo y con la palabra 'Tennis' en gris." class="img-fluid"></a>
           </div>
           <ul class="encabezado__nav nav flex-column flex-md-row justify-content-md-center align-items-center">
               <li class="nav-item">
@@ -26,15 +26,41 @@
           </ul>
       </header>
       </div>
-    <div class="">
-      <h1 class="">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+    <main class="container-fluid">
+      <h1 class="titulo-miembros text-center mt-5 mb-4 text-info">Miembros destacados de la liga</h1>
+      <div class="conjunto-miembros d-flex justify-content-center flex-wrap">
+        <div class="miembro">
+          <img src="./assets/images/Alfredo.png" alt="Pixelart de Alfredo Reyes" class="miembro__img">
+          <h4 class="miembro__nombre">Alfredo Reyes</h4>
+          <p class="miembro__desc">Ganador de las primeras dos ligas. ¡Su apellido le viene al pelo!</p>
+        </div>
+        <div class="miembro">
+          <img src="./assets/images/Juana.png" alt="Pixelart de Juana Gómez" class="miembro__img">
+          <h4 class="miembro__nombre">Juana Gómez</h4>
+          <p class="miembro__desc">Se le da de muerte el tenis, ¡y es la creadora de esta liga!</p>
+        </div>
+        <div class="miembro">
+          <img src="./assets/images/Maria.png" alt="Pixelart de María Pérez" class="miembro__img">
+          <h4 class="miembro__nombre">María Pérez</h4>
+          <p class="miembro__desc">Dice que ha ganado varios premios regionales, pero nadie lo ha verificado.</p>
+        </div>
+        <div class="miembro">
+          <img src="./assets/images/Hugo.png" alt="Pixelart de Hugo Manjón-Cabeza" class="miembro__img">
+          <h4 class="miembro__nombre">Hugo Manjón-Cabeza</h4>
+          <p class="miembro__desc">No sabe jugar muy bien, ¡pero ha creado esta web!</p>
+        </div>
+        <div class="miembro">
+          <img src="./assets/images/Pablo.png" alt="Pixelart de Pablo López" class="miembro__img">
+          <h4 class="miembro__nombre">Pablo López</h4>
+          <p class="miembro__desc">No le gusta mucho el tenis, lo obligaron a unirse.</p>
+        </div>
+        <div class="miembro">
+          <img src="./assets/images/Cristina.png" alt="Pixelart de Cristina Marín" class="miembro__img">
+          <h4 class="miembro__nombre">Cristina Marín</h4>
+          <p class="miembro__desc">La rival de Alfredo. No piensa dejarle ganar ninguna liga más.</p>
+        </div>
+      </div>
+    </main>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>
