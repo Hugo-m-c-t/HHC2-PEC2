@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
     <title>Liga de Tenis: Artículo - PEC2 Hugo Manjón-Cabeza Taillefer</title>
   </head>
-  <body>
+  <body class="cuerpo">
     <div class="encabezado container-fluid bg-secondary">
       <header class="d-flex flex-column flex-md-row align-items-center justify-content-md-between  py-3">
           <div class="encabezado__logo">
@@ -25,16 +25,71 @@
               </li>
           </ul>
       </header>
-      </div>
-    <div class="">
-      <h1 class="">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
     </div>
+    <main>
+    <nav class="mx-5 mt-3" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="./index.html">Portada</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Liga</li>
+      </ol>
+    </nav>
+      <div class="articulo__header container-fluid">
+      <h1 class="articulo__titulo mb-4 text-center">3ª LIGA DE LOS NARANJOS - Liga Píxel</h1>
+      <img src="./assets/images/cancha.jpg" class="articulo__header__img img-fluid">
+      </div>
+      <div class="articulo container mt-5">
+        <div class="row">
+            <div class="col">
+              <p>¡Llega la 3ª edición de nuestra liga! Gracias a todo vuestro apoyo podemos seguir realizando
+              estos eventos, ¡y en esta ocasión estrenamos página web! Recordad que podéis contactar con 
+              Juana para comprar camisetas personalizadas, cuyos beneficios se destinarán a que esta liga
+              siga adelante. Entre otras cosas, el dinero irá para los premios que ofrecemos por primera
+              vez en esta edición. Si quedas dentro del podio, ¡te podrás llevar algunas recompensas!</p>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col">
+              <h2>Formato de la liga</h2>
+            </div>
+          </div>
+          <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col">
+              <p>¡Tenis al puro estilo del videojuego! Estrenamos formato nuevo con mecánicas que pondrán
+                todas las cartas sobre la mesa. 
+              </p>
+              <blockquote class="cita-alfredo p-3">
+                <p class="text-center text-black">Voy a apostarlo todo e intentar ganar con tres vidas.</p>
+                <footer class="blockquote-footer mx-4">Alfredo, ganador de las dos primera ligas</footer>
+              </blockquote>
+              <img src="./assets/images/Trofeo.png" class="img-fluid my-5">
+            </div>
+            <div class="col">
+              <p>En esta liga además de puntos, habrá <i>Puntos de Vida</i>. Cada jugador tiene tres vidas, y
+              cada vez que pierda un partida, también perderá una vida. Si llegas a 0, ¡estás fuera! Ganar
+              un partido te otorga 10 puntos, y si ganas tres seguidos consigues un <i>Combo</i>, que otorga
+              15 puntos extra.</p>
+              <p>¡Todo al rojo! Los jugadores que tengan dos vidas o más pueden apostar cada partido dos vidas
+                en vez de una. Si pierde, se eliminan dos vidas, pero si se gana, se obtienen 10 puntos extra.
+              </p>
+              <p>Cada partido tendrá una duración predeterminada de 1 hora o 1 set, lo que ocurra antes. Se
+                permite que ambos jugadores acuerden que se extienda la duración de un partido, pero debe 
+                comunicarse al encargado con al menos dos días de antelación.</p>
+              <p>En esta liga prima la estrategia. Elige bien tus cartas y llega a la cima. ¡El que tenga más puntos
+                cuando sólo quede un jugador gana!</p>
+            </div>
+          </div>
+          <div class="row mt-5 mb-4">
+            <div class="col">
+              <h2>Premios</h2>
+              <ul class="premios list-group list-group-flush">
+                <li class="premios__oro list-group-item">Primer puesto: Tarjeta regalo 50€ (plataforma a elegir)</li>
+                <li class="premios__plata list-group-item">Segundo puesto: Pack 12 pelotas de tenis</li>
+                <li class="premios__bronce list-group-item">Tercer puesto: Camiseta Liga Píxel</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </main>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>

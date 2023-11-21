@@ -3,7 +3,6 @@
 @layer common {
 // Encabezado
 .encabezado {
-  margin-bottom: 2rem;
   container: encabezado / inline-size;
 }
 
@@ -88,8 +87,9 @@
   background: lab(97.964%, -8.581%, 12.143%);
 }
 
-.encabezado--index {
+.encabezado-index {
   background: none;
+  margin-bottom: 2rem;
 }
 
 // Vínculos
@@ -106,6 +106,18 @@
   color: rgba($info, 0.8); 
 }
 
+// Componente breadcrumb de Bootstrap
+
+.breadcrumb-item {
+  font-size: 1.4rem !important;
+}
+
+@media (min-width: 2200px) {
+  .breadcrumb-item {
+    font-size: 2.2rem !important;
+  }
+}
+
 }
 
 @layer other {
@@ -113,8 +125,13 @@
 // Portada con Grid y alternativa
 
 .cuerpo {
-  background-image: url("../images/fondo.png");
+  background-color: hwb(81 88% 2%) !important;
 }
+
+.cuerpo-portada {
+  background-image: url("../images/fondo.png") !important;
+  }
+
 
 .portada {
   container: portada / inline-size;
@@ -128,7 +145,7 @@
   flex-direction: column;
   justify-content: center;
   font-family: $font-family-pixel, sans-serif;
-  box-shadow: 9px 10px 5px -7px rgba(0,0,0,0.25);
+  box-shadow: 9px 10px 5px -7px rgba(0,0,0,0.25) !important;
 }
 
 .portada__titulo {
@@ -486,4 +503,95 @@
     font-size: 1.5rem;
   }
 }
+
+// Artículo
+
+.articulo {
+  width: 80% !important;
+}
+
+.articulo__header {
+  container: articulo__header / inline-size;
+  padding: 0 !important;
+}
+
+.articulo__titulo {
+  text-align: center;
+  color: $info;
+  font-size: 3rem;
+}
+
+.articulo:has(.row > .col > p) {
+  font-size: 1.2rem;
+  color: $info;
+}
+
+.cita-alfredo {
+  background-color: $secondary;
+  border: 5px solid $white;
+  border-radius: 10px;
+}
+
+.premios {
+background-color: rgba($white, 0.2);
+}
+
+.premios__oro {
+  color: #f3ca14 !important;
+  font-size: 1.8rem;
+}
+
+.premios__plata {
+  color: #b1aea3 !important;
+  font-size: 1.6rem;
+}
+
+.premios__bronce {
+  color: rgb(185, 120, 58) !important;
+  font-size: 1.4rem;
+}
+
+:is(.premios__oro, .premios__plata, .premios__bronce) {
+  background: none !important;
+}
+
+@media (min-width: 768px) {
+.articulo:has(.row > .col > p) {
+  font-size: 1.5rem;
+  }
+}
+
+@container articulo__header (min-width: 600px) {
+  .articulo__header {
+    position: relative;
+    text-align: center;
+  }
+
+  .articulo__titulo {
+      position: absolute;
+      width: inherit;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 4rem;
+      color: $white;
+      background-color: rgba($white, 0.1);
+      backdrop-filter: blur(10px);
+  }
+
+}
+
+@container articulo__header (min-width: 1024px) {
+  .articulo__header__img {
+    height: 400px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+}
+
+
+
+
 }
