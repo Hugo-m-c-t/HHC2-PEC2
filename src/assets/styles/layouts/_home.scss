@@ -1,4 +1,6 @@
+@layer common, other;
 
+@layer common {
 // Encabezado
 .encabezado {
   container: encabezado / inline-size;
@@ -116,7 +118,9 @@
   }
 }
 
+}
 
+@layer other {
 
 // Portada con Grid y alternativa
 
@@ -687,4 +691,4 @@ background-color: rgba($white, 0.2);
   }
 }
 
-
+}
