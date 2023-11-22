@@ -33,6 +33,76 @@
             <li class="breadcrumb-item active" aria-current="page">Formulario de Inscripción</li>
           </ol>
         </nav>
+        <div class="formulario-texto container mt-5 px-4">
+          <h1 class="formulario-texto__titulo text-center text-md-left mb-4"><i class="fa-solid fa-clipboard-list mx-2" style="color: #3581b8;"></i> Formulario de Inscripción</h1>
+          <p class="formulario-texto__parrafo">¡Rellena este formulario para formar parte de la Liga Píxel! Ten en cuenta que las plazas
+            son limitadas, por lo que si sabes que no tendrás tiempo durante las fechas de la liga
+            (18 noviembre a 15 diciembre), por favor deja espacio a otra persona. 
+          </p>
+          <p class="formulario-texto__parrafo">Escribe tus datos, especifica tu pseudónimo favorito y ¡a disfrutar! Las inscripciones terminan
+            el 4 de noviembre a las 00:00, no te lo pienses mucho. Esta página se sustituirá por otra 
+            que muestre los emparejamientos el 11 de noviembre. 
+          </p>
+        </div>
+        <form class="formulario container mt-5 p-5" name="Inscripccion" netlify>
+          <div class="mb-3">
+            <label for="InputName" class="formulario__label form-label">Nombre</label>
+            <input type="text" class="formulario__input form-control" id="InputName">
+          </div>
+          <div class="mb-3">
+            <label for="InputSurname" class="formulario__label form-label">Apellidos</label>
+            <input type="text" class="formulario__input form-control" id="InputSurname">
+          </div>
+          <div class="mb-3">
+            <label for="InputEmail" class="formulario__label form-label">Email</label>
+            <input type="email" class="formulario__input form-control" id="InputEmail">
+          </div>
+          <div class=" mb-4">
+            <label for="InputPhone" class="formulario__label form-label">Número de Teléfono</label>
+            <input type="number" class="formulario__input form-control" id="InputPhone">
+          </div>
+          <div><label class="formulario__label form-check-label">Tardes de la semana en las que estás disponible</label>
+            <p class="formulario__label text-muted">(se intentarán crear los emparejamientos para que pueda participar el mayor número de personas)</p></div>
+          <div class="mb-2 form-check">
+            <input type="checkbox" class="form-check-input" id="Check1">
+            <label class="formulario__label form-check-label" for="Check1">Lunes</label>
+          </div>
+          <div class="mb-2 form-check">
+            <input type="checkbox" class="form-check-input" id="Check2">
+            <label class="formulario__label form-check-label" for="Check2">Martes</label>
+          </div>
+          <div class="mb-2 form-check">
+            <input type="checkbox" class="form-check-input" id="Check3">
+            <label class="formulario__label form-check-label" for="Check3">Miércoles</label>
+          </div>
+          <div class="mb-2 form-check">
+            <input type="checkbox" class="form-check-input" id="Check4">
+            <label class="formulario__label form-check-label" for="Check4">Jueves</label>
+          </div>
+          <div class="mb-2 form-check">
+            <input type="checkbox" class="form-check-input" id="Check5">
+            <label class="formulario__label form-check-label" for="Check5">Viernes</label>
+          </div>
+          <div class="mb-2 form-check">
+            <input type="checkbox" class="form-check-input" id="Chec6">
+            <label class="formulario__label form-check-label" for="Check6">Sábado</label>
+          </div>
+          <div class="mb-4 form-check">
+            <input type="checkbox" class="form-check-input" id="Check7">
+            <label class="formulario__label form-check-label" for="Check7">Domingo</label>
+          </div>
+          <div class="mb-3">
+            <label for="InputIGN" class="formulario__label form-label">Pseudónimo</label>
+            <input type="text" class="formulario__input form-control" id="InputSurname">
+          </div>
+          <div class="mb-5">
+            <label for="InputGame" class="formulario__label form-label">¿De qué videojuego es el pseudónimo?</label>
+            <input type="text" class="formulario__input form-control" id="InputSurname">
+          </div>
+          <div class="text-left text-md-center">
+            <button type="submit" class="formulario__enviar btn btn-primary px-5">Enviar</button>
+          </div>
+        </form>
       </main>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
