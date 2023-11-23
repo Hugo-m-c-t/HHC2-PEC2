@@ -11,6 +11,10 @@
   margin-bottom: 1rem;
 }
 
+.nav-link {
+  font-size: 2rem !important;
+}
+
 @container encabezado (min-width: 768px) {
   .encabezado__logo {
     max-width: 20dvw;
@@ -19,6 +23,10 @@
 
   .encabezado__nav{
     margin-right: 5rem;
+  }
+
+  .nav-link {
+    font-size: 2.5rem !important;
   }
 }
 
@@ -176,13 +184,13 @@
 }
 
 .portada__boton {
-  color: white;
+  color: white !important;
   font-size: 2rem !important;
   margin-top: 2rem;
 }
 
 .portada__boton:hover {
-  color: white;
+  color: white !important;
   background-color: $info;
   border: none;
 }
@@ -657,7 +665,7 @@ background-color: rgba($white, 0.2);
 }
 
 .formulario__enviar {
-  color: $white;
+  color: $white !important;
   font-size: 2rem !important;
   background: rgb(57,168,217) !important;
   background: linear-gradient(132deg, hwb(205 33% 15%) 0%, hwb(128 16% 9%) 100%) !important;
