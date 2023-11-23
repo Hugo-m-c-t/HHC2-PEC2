@@ -160,7 +160,7 @@
   font-size: 5rem;
   color: $primary;
   text-align: center;
-  text-shadow: 0 4px 0 rgba($orange, 0.5);
+  text-shadow: 0px 4px 0 rgba($orange, 0.5);
 }
 
 .portada__subtitulo {
@@ -169,7 +169,7 @@
   text-decoration: underline overline;
   text-align: center;
   margin: 1rem;
-  text-shadow: 0 3px 0 rgba($orange, 0.5);
+  text-shadow: 0px 3px 0 rgba($orange, 0.5);
 }
 
 .portada__bloque-texto {
@@ -202,7 +202,7 @@
   color: $white;
   font-size: 1.5rem;
   text-align: center;
-  text-shadow: 0 2px 0 rgba($black, 0.5);
+  text-shadow: 0px 2px 0 rgba($black, 0.5);
 }
 
 @container portada (min-width: 768px){
@@ -240,8 +240,9 @@
     background-color: $secondary;
     box-shadow: none;
     grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 0;
-    grid-row-gap: 0;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     grid-template-rows: auto;
     }
 
@@ -666,6 +667,7 @@ background-color: rgba($white, 0.2);
 .formulario__enviar {
   color: $white !important;
   font-size: 2rem !important;
+  background: rgb(57,168,217) !important;
   background: linear-gradient(132deg, hwb(205 33% 15%) 0%, hwb(128 16% 9%) 100%) !important;
   border: none !important;
 }
